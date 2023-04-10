@@ -1,0 +1,4 @@
+res://Scenes/ui_scenes/main_menu.tscn
+res://scene_handler.tscn
+res://scene_handler.gd
+res://Scenes/main_scenes/game_scene.tscn

@@ -1,0 +1,54 @@
+2a60927148abd1d33b818b535e306557
+::res://::1680708591
+icon.svg::CompressedTexture2D::724638642450587789::1680111554::1680111562::1::::<><>::
+scene_handler.gd::GDScript::-1::1680708488::0::1::::<>Node<>::
+scene_handler.tscn::PackedScene::-1::1680708591::0::1::::<><>::uid://ddavm5gf0y08<>res://scene_handler.gd
+::res://Assets/::1680187582
+::res://Assets/Environment/::1680115071
+::res://Assets/Environment/Objects/::1680120691
+objects_spriteSheet.png::CompressedTexture2D::8133023879737061717::1680120684::1680120691::1::::<><>::
+::res://Assets/Environment/Tilesets/::1680114967
+terrainTiles_default.png::CompressedTexture2D::5405981859731752268::1509628600::1680114967::1::::<><>::
+::res://Assets/Towers/::1680128022
+towerDefense_tile181.png::CompressedTexture2D::348800626490153694::1469805972::1680127389::1::::<><>::
+towerDefense_tile228.png::CompressedTexture2D::991192893103436411::1680128010::1680128022::1::::<><>::
+towerDefense_tile249.png::CompressedTexture2D::138363725274535893::1680127376::1680127389::1::::<><>::
+towerDefense_tile250.png::CompressedTexture2D::5893703768806736037::1680127663::1680127665::1::::<><>::
+towerDefense_tile251.png::CompressedTexture2D::6563768278453609746::1680128020::1680128022::1::::<><>::
+::res://Assets/UI/::1680187991
+cursor_pointer3D_shadow.png::CompressedTexture2D::5572820118734054686::1402656718::1680187991::1::::<><>::
+::res://Assets/UI/Art/::1680187991
+mm_BackGround.png::CompressedTexture2D::3702740946253823207::1680187936::1680187991::1::::<><>::
+::res://Assets/UI/Buttons/::1680188789
+red_button00.png::CompressedTexture2D::3844749006545423875::1393254328::1680188731::1::::<><>::
+red_button01.png::CompressedTexture2D::4298335945118791626::1393254328::1680188731::1::::<><>::
+red_button11.png::CompressedTexture2D::1686444227501577368::1393254328::1680188789::1::::<><>::
+::res://Assets/UI/Fonts/::1680280693
+Kenney Future Narrow.ttf::FontFile::3805366041158755923::1509878190::1680187991::1::::<><>::
+Kenney_FN_mm_theme.tres::FontFile::3569556264293382688::1680280693::0::1::::<><>::
+::res://License/::1680187716
+Kenney Fonts License.txt::TextFile::-1::1509884073::0::1::::<><>::
+Kenney Game Icons License.txt::TextFile::-1::1414962297::0::1::::<><>::
+Top Down Tanks Redux License.txt::TextFile::-1::1509625375::0::1::::<><>::
+Tower Defense Top Down License.txt::TextFile::-1::1469806176::0::1::::<><>::
+UI Pack License.txt::TextFile::-1::1393255620::0::1::::<><>::
+UI Pack Space Expansion License.txt::TextFile::-1::1402656437::0::1::::<><>::
+::res://Scenes/::1680708667
+map_1.tscn::PackedScene::4579061645404578811::1680280009::0::1::::<><>::uid://cjaxy4rgdl0oe<>uid://dn4xykuksgu1b<>uid://c7ryqno6d606u<>uid://d1f3a6mmp7xmn<>uid://cod0s37f4i6r8
+::res://Scenes/actors/::1680128120
+::res://Scenes/actors/turrets/::1680129931
+gun_t1.gd::GDScript::-1::1680129698::0::1::::<>Node2D<>::
+gun_t1.tscn::PackedScene::7055465271995697310::1680129090::0::1::::<><>::uid://e77xv3l1jgdy<>uid://b8a3h4xlr214
+gun_t2.gd::GDScript::-1::1680129931::0::1::::<>Node2D<>::
+gun_t2.tscn::PackedScene::8996195597563967345::1680129931::0::1::::<><>::res://Scenes/actors/turrets/gun_t2.gd<>uid://e77xv3l1jgdy<>uid://cp77o7vojskr2
+missile_t1.gd::GDScript::-1::1680129905::0::1::::<>Node2D<>::
+missile_t1.tscn::PackedScene::5763229901044111631::1680129905::0::1::::<><>::uid://e77xv3l1jgdy<>res://Scenes/actors/turrets/missile_t1.gd<>uid://oee2jjc76co6<>uid://c0rskmcyvkrbm
+turrets.gd::GDScript::-1::1680129698::0::1::::<>Node2D<>::
+::res://Scenes/main_scenes/::1680708585
+game_scene.tscn::PackedScene::1957629264681792680::1680708585::0::1::::<><>::uid://bthbsrm087odw
+main_menu.tscn::PackedScene::216797842752918955::1680708488::0::1::::<><>::uid://bs0vuqna6ys20<>uid://b2ie72tg16bx7<>uid://bu1oppkim0qfr<>uid://ya6qwqktgggu<>uid://bq4ecndlurebg
+::res://Scenes/maps/::1680127594
+map_1.tscn::PackedScene::3734553130993053540::1680126989::0::1::::<><>::uid://cjaxy4rgdl0oe<>uid://dn4xykuksgu1b
+::res://Scenes/ui_scenes/::1680708667
+::res://unused-assets/::1680187976
+README.md::TextFile::-1::1680187986::0::1::::<><>::

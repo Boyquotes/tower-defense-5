@@ -1,0 +1,152 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddavm5gf0y08"]
+
+[ext_resource type="Texture2D" uid="uid://bs0vuqna6ys20" path="res://Assets/UI/Art/mm_BackGround.png" id="1_go8np"]
+[ext_resource type="Texture2D" uid="uid://b2ie72tg16bx7" path="res://Assets/UI/Buttons/red_button01.png" id="2_wn1yv"]
+[ext_resource type="Texture2D" uid="uid://bu1oppkim0qfr" path="res://Assets/UI/Buttons/red_button00.png" id="3_mmv7b"]
+[ext_resource type="Texture2D" uid="uid://ya6qwqktgggu" path="res://Assets/UI/Buttons/red_button11.png" id="4_1r1b5"]
+[ext_resource type="FontFile" uid="uid://bq4ecndlurebg" path="res://Assets/UI/Fonts/Kenney_FN_mm_theme.tres" id="5_tvkgx"]
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_go8np")
+expand_mode = 3
+
+[node name="m" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="vb" type="VBoxContainer" parent="m"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="newGame" type="TextureButton" parent="m/vb"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_wn1yv")
+texture_pressed = ExtResource("3_mmv7b")
+texture_hover = ExtResource("4_1r1b5")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="m/vb/newGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_tvkgx")
+theme_override_font_sizes/font_size = 40
+text = "new game"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="settings" type="TextureButton" parent="m/vb"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_wn1yv")
+texture_pressed = ExtResource("3_mmv7b")
+texture_hover = ExtResource("4_1r1b5")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="m/vb/settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_tvkgx")
+theme_override_font_sizes/font_size = 40
+text = "settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="about" type="TextureButton" parent="m/vb"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_wn1yv")
+texture_pressed = ExtResource("3_mmv7b")
+texture_hover = ExtResource("4_1r1b5")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="m/vb/about"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_tvkgx")
+theme_override_font_sizes/font_size = 40
+text = "about"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Control" type="Control" parent="m/vb"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="quit" type="TextureButton" parent="m/vb"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_wn1yv")
+texture_pressed = ExtResource("3_mmv7b")
+texture_hover = ExtResource("4_1r1b5")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="m/vb/quit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_tvkgx")
+theme_override_font_sizes/font_size = 40
+text = "quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
