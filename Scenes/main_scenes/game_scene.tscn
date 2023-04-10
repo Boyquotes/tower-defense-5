@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://25j4rm6x4e77"]
+[gd_scene load_steps=5 format=3 uid="uid://25j4rm6x4e77"]
 
 [ext_resource type="PackedScene" uid="uid://bthbsrm087odw" path="res://Scenes/maps/map_1.tscn" id="1_arumy"]
+[ext_resource type="PackedScene" uid="uid://cod0s37f4i6r8" path="res://Scenes/actors/turrets/missile_t1.tscn" id="2_rqrcw"]
+[ext_resource type="PackedScene" uid="uid://c7ryqno6d606u" path="res://Scenes/actors/turrets/gun_t1.tscn" id="3_5xncr"]
+[ext_resource type="PackedScene" uid="uid://d1f3a6mmp7xmn" path="res://Scenes/actors/turrets/gun_t2.tscn" id="4_nvtuc"]
 
 [node name="gameScene" type="Node2D"]
 
 [node name="map1" parent="." instance=ExtResource("1_arumy")]
+
+[node name="missile_t1" parent="." instance=ExtResource("2_rqrcw")]
+position = Vector2(150, 305)
+
+[node name="gun_t1" parent="." instance=ExtResource("3_5xncr")]
+position = Vector2(308, 238)
+
+[node name="gun_t2" parent="." instance=ExtResource("4_nvtuc")]
+position = Vector2(328, 505)
