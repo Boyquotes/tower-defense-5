@@ -1,9 +1,10 @@
-Control
-Label
+TextureRect
 TextureButton
 VBoxContainer
+Control
+CanvasLayer
+Label
 MarginContainer
-TextureRect
 Sprite2D
 Marker2D
 Node2D
