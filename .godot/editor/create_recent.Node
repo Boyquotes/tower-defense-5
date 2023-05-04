@@ -1,3 +1,9 @@
+PathFollow2D
+Path2D
+Node2D
+Camera2D
+CollisionShape2D
+CharacterBody2D
 TextureRect
 TextureButton
 VBoxContainer
@@ -7,6 +13,5 @@ Label
 MarginContainer
 Sprite2D
 Marker2D
-Node2D
 TileMap
 Node
