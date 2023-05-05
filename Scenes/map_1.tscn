@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ryqno6d606u" path="res://Scenes/actors/turrets/gun_t1.tscn" id="3_rujlb"]
 [ext_resource type="PackedScene" uid="uid://d1f3a6mmp7xmn" path="res://Scenes/actors/turrets/gun_t2.tscn" id="4_jp44p"]
 [ext_resource type="PackedScene" uid="uid://cod0s37f4i6r8" path="res://Scenes/actors/turrets/missile_t1.tscn" id="5_iwau4"]
+[ext_resource type="Script" path="res://Scenes/Timer.gd" id="6_kdbmc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5hk4"]
 texture = ExtResource("1_kfc40")
@@ -99,12 +100,6 @@ terrain_set_0/terrain_0/color = Color(0.501961, 0.501961, 0.501961, 1)
 sources/0 = SubResource("TileSetAtlasSource_mh1j0")
 sources/3 = SubResource("TileSetAtlasSource_5rtou")
 
-[sub_resource type="Curve2D" id="Curve2D_kuw2t"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -9, 285, 0, 0, 0, 0, 23, 293, 0, 0, 0, 0, 35, 409, 0, 0, 0, 0, 545, 418, 0, 0, 0, 0, 543, 229, 0, 0, 0, 0, 921, 228, 0, 0, 0, 0, 920, 415, 0, 0, 0, 0, 675, 419, 0, 0, 0, 0, 677, 607, 0, 0, 0, 0, 918, 608, 0, 0, 0, 0, 924, 669, 0, 0, 0, 0, 1116, 664, 0, 0, 0, 0, 1129, 233, 0, 0, 0, 0, 1280, 223)
-}
-point_count = 14
-
 [node name="map1" type="Node2D"]
 texture_filter = 1
 
@@ -137,9 +132,8 @@ position = Vector2(606, 368)
 
 [node name="PathSpawner" type="Node2D" parent="."]
 
-[node name="Path2D" type="Path2D" parent="PathSpawner"]
-curve = SubResource("Curve2D_kuw2t")
+[node name="Timer" type="Timer" parent="PathSpawner"]
+autostart = true
+script = ExtResource("6_kdbmc")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="PathSpawner/Path2D"]
-position = Vector2(-9, 285)
-rotation = 0.244979
+[connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner/Timer" method="_on_timeout"]

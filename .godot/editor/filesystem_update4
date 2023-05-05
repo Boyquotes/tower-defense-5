@@ -1,5 +1,5 @@
 res://Scenes/map_1.tscn
-res://Scenes/main_scenes/game_scene.gd
-res://Scenes/main_scenes/UI.gd
+res://Scenes/Timer.gd
 res://Scenes/actors/enemies/Soldier_A.tscn
+res://Scenes/maps/map_1_path.tscn
 res://Scenes/actors/enemies/Soldier_A.gd

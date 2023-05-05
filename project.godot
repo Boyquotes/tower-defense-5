@@ -21,9 +21,8 @@ config/size/viewport_height=648
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 mouse_cursor/custom_image="res://Assets/UI/cursor_pointer3D_shadow.png"
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [rendering]
 
