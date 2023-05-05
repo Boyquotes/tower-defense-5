@@ -4,4 +4,4 @@ extends Timer
 
 func _on_timeout():
 	var tempPath = path.instantiate()
-	add_child(tempPath)
+	get_parent().add_child(tempPath)

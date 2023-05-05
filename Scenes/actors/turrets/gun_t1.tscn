@@ -1,25 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7ryqno6d606u"]
+[gd_scene load_steps=5 format=3 uid="uid://c7ryqno6d606u"]
 
 [ext_resource type="Texture2D" uid="uid://e77xv3l1jgdy" path="res://Assets/Towers/towerDefense_tile181.png" id="1_ecgpa"]
+[ext_resource type="Script" path="res://Scenes/actors/turrets/gun_t1.gd" id="1_w2p58"]
 [ext_resource type="Texture2D" uid="uid://b8a3h4xlr214" path="res://Assets/Towers/towerDefense_tile249.png" id="2_e2djc"]
 
-[sub_resource type="GDScript" id="GDScript_fivip"]
-script/source = "extends Node2D
-
-func _physics_process(delta):
-	turn()
-	pass
-func turn():
-	var enemyPos = get_global_mouse_position()
-	get_node(\"gun\").look_at(enemyPos)
-	pass
-"
+[sub_resource type="CircleShape2D" id="CircleShape2D_s3jo1"]
+radius = 185.132
 
 [node name="gun_t1" type="Node2D"]
-script = SubResource("GDScript_fivip")
+script = ExtResource("1_w2p58")
 
 [node name="base" type="Sprite2D" parent="."]
 texture = ExtResource("1_ecgpa")
+
+[node name="range" type="Area2D" parent="base"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="base/range"]
+shape = SubResource("CircleShape2D_s3jo1")
 
 [node name="gun" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
@@ -28,3 +25,5 @@ offset = Vector2(12, 0)
 
 [node name="muzzle" type="Marker2D" parent="gun"]
 position = Vector2(44, 0)
+
+[node name="bulletContainer" type="Node" parent="gun/muzzle"]

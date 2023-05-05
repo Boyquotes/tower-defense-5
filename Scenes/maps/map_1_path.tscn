@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3tr81gy0kdtb"]
+[gd_scene load_steps=3 format=3 uid="uid://cs0g5to1j8jps"]
 
-[ext_resource type="PackedScene" uid="uid://418fm8opdlfc" path="res://Scenes/actors/enemies/Soldier_A.tscn" id="1_q251o"]
+[ext_resource type="PackedScene" uid="uid://caephs020ws8o" path="res://Scenes/actors/enemies/soldier_A.tscn" id="1_axi6h"]
 
 [sub_resource type="Curve2D" id="Curve2D_61jsf"]
 _data = {
@@ -15,8 +15,4 @@ curve = SubResource("Curve2D_61jsf")
 position = Vector2(-9, 285)
 rotation = 0.244979
 
-[node name="16852" type="Timer" parent="PathFollow2D"]
-wait_time = 0.2
-one_shot = true
-
-[node name="Soldier_A" parent="PathFollow2D" instance=ExtResource("1_q251o")]
+[node name="Soldier_A" parent="PathFollow2D" instance=ExtResource("1_axi6h")]

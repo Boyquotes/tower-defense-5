@@ -119,16 +119,13 @@ layer_0/tile_data = PackedInt32Array(393216, 327680, 1, 393217, 131072, 0, 39321
 [node name="turrets" type="Node2D" parent="."]
 
 [node name="gun_t1" parent="turrets" instance=ExtResource("3_rujlb")]
-position = Vector2(113, 339)
+position = Vector2(236, 366)
 
 [node name="gun_t2" parent="turrets" instance=ExtResource("4_jp44p")]
-position = Vector2(354, 281)
+position = Vector2(794, 327)
 
 [node name="missile_t1" parent="turrets" instance=ExtResource("5_iwau4")]
 position = Vector2(281, 527)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(606, 368)
 
 [node name="PathSpawner" type="Node2D" parent="."]
 
