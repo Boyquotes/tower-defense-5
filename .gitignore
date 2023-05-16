@@ -10,3 +10,18 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
+.godot/editor/create_recent.Node
+.godot/editor/editor_layout.cfg
+.godot/editor/filesystem_cache8
+.godot/editor/filesystem_update4
+.godot/editor/game_scene.tscn-editstate-15d90c6aa78117eb494b440ab780d3bf.cfg
+.godot/editor/game_scene.tscn-folding-15d90c6aa78117eb494b440ab780d3bf.cfg
+.godot/editor/gun_t1.tscn-editstate-33a497dbb3e23bd53cf0207b9020dab5.cfg
+.godot/editor/map_1.tscn-editstate-4e6b98e3f778d6b6a08e41dd74618229.cfg
+.godot/editor/map_1.tscn-editstate-a41bca0027885b27a74260b07185e452.cfg
+.godot/editor/map_1.tscn-folding-4e6b98e3f778d6b6a08e41dd74618229.cfg
+.godot/editor/map_1.tscn-folding-a41bca0027885b27a74260b07185e452.cfg
+.godot/editor/project_metadata.cfg
+.godot/editor/recent_dirs
+.godot/editor/script_editor_cache.cfg
+.godot/uid_cache.bin

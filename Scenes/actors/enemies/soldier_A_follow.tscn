@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwsul3cio3k6a"]
+
+[ext_resource type="PackedScene" uid="uid://caephs020ws8o" path="res://Scenes/actors/enemies/soldier_A.tscn" id="1_gxl8g"]
+
+[node name="charFollow2D" type="PathFollow2D"]
+position = Vector2(-12, 287)
+rotation = 0.0454233
+cubic_interp = false
+loop = false
+
+[node name="soldier_A" parent="." instance=ExtResource("1_gxl8g")]
+speed = 100
+
+[node name="28626" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true

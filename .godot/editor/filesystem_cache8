@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1683311298
+::res://::1684264996
 icon.svg::CompressedTexture2D::724638642450587789::1680111554::1680111562::1::::<><>::
 README.md::TextFile::-1::1681128599::0::1::::<><>::
 scene_handler.gd::GDScript::-1::1680715119::0::1::::<>Node<>::
@@ -38,30 +38,29 @@ Top Down Tanks Redux License.txt::TextFile::-1::1509625375::0::1::::<><>::
 Tower Defense Top Down License.txt::TextFile::-1::1469806176::0::1::::<><>::
 UI Pack License.txt::TextFile::-1::1393255620::0::1::::<><>::
 UI Pack Space Expansion License.txt::TextFile::-1::1402656437::0::1::::<><>::
-::res://Scenes/::1683311077
-map_1.tscn::PackedScene::4579061645404578811::1683311077::0::1::::<><>::uid://cjaxy4rgdl0oe<>uid://dn4xykuksgu1b<>uid://c7ryqno6d606u<>uid://d1f3a6mmp7xmn<>uid://cod0s37f4i6r8<>res://Scenes/Timer.gd
-Timer.gd::GDScript::-1::1683300117::0::1::::<>Timer<>::
+::res://Scenes/::1683906903
+Timer.gd::GDScript::-1::1683312682::0::1::::<>Timer<>::
 ::res://Scenes/actors/::1683217187
-::res://Scenes/actors/enemies/::1683311298
-soldier_A.gd::GDScript::-1::1683300478::0::1::::<>CharacterBody2D<>::
-Soldier_A.tscn::PackedScene::-1::1683311298::0::1::::<><>::uid://c3nrpxrks06r0<>res://Scenes/actors/enemies/soldier_A.gd
-::res://Scenes/actors/turrets/::1683311155
-bullet_sm.tscn::PackedScene::6969415188038729997::1683311077::0::1::::<><>::uid://bgry0bmmmykf1
-gun_t1.gd::GDScript::-1::1680129698::0::1::::<>Node2D<>::
-gun_t1.tscn::PackedScene::7055465271995697310::1683311155::0::1::::<><>::uid://e77xv3l1jgdy<>res://Scenes/actors/turrets/gun_t1.gd<>uid://b8a3h4xlr214
+::res://Scenes/actors/enemies/::1683906455
+soldier_A.gd::GDScript::-1::1683906455::0::1::::<>CharacterBody2D<>::
+soldier_A.tscn::PackedScene::4782023119152736920::1683906425::0::1::::<><>::uid://c3nrpxrks06r0
+::res://Scenes/actors/turrets/::1683905327
+bullet_sm.gd::GDScript::-1::1683312775::0::1::::<>CharacterBody2D<>::
+bullet_sm.tscn::PackedScene::6969415188038729997::1683312775::0::1::::<><>::uid://bgry0bmmmykf1<>res://Scenes/actors/turrets/bullet_sm.gd
+gun_t1.gd::GDScript::-1::1683313418::0::1::::<>Node2D<>::
+gun_t1.tscn::PackedScene::7055465271995697310::1683905327::0::1::::<><>::uid://e77xv3l1jgdy<>res://Scenes/actors/turrets/gun_t1.gd<>uid://b8a3h4xlr214
 gun_t2.gd::GDScript::-1::1680129931::0::1::::<>Node2D<>::
 gun_t2.tscn::PackedScene::8996195597563967345::1680129931::0::1::::<><>::res://Scenes/actors/turrets/gun_t2.gd<>uid://e77xv3l1jgdy<>uid://cp77o7vojskr2
 missile_t1.gd::GDScript::-1::1680129905::0::1::::<>Node2D<>::
 missile_t1.tscn::PackedScene::5763229901044111631::1680129905::0::1::::<><>::uid://e77xv3l1jgdy<>res://Scenes/actors/turrets/missile_t1.gd<>uid://oee2jjc76co6<>uid://c0rskmcyvkrbm
-turrets.gd::GDScript::-1::1683310857::0::1::::<>Node2D<>::
-::res://Scenes/main_scenes/::1683217115
+turrets.gd::GDScript::-1::1683312833::0::1::::<>Node2D<>::
+::res://Scenes/main_scenes/::1683907196
 game_scene.gd::GDScript::-1::1683217090::0::1::::<>Node2D<>::
-game_scene.tscn::PackedScene::1957629264681792680::1683216088::0::1::::<><>::uid://bthbsrm087odw<>res://Scenes/main_scenes/game_scene.gd<>uid://cod0s37f4i6r8<>uid://c7ryqno6d606u<>uid://d1f3a6mmp7xmn<>res://Scenes/main_scenes/UI.gd<>res://Scenes/main_scenes/vb.gd<>uid://oay6gx6lw4wk<>uid://b8a3h4xlr214<>uid://c0rskmcyvkrbm
+game_scene.tscn::PackedScene::1957629264681792680::1683907196::0::1::::<><>::uid://bnk1bnbgcta3h<>res://Scenes/main_scenes/game_scene.gd<>res://Scenes/main_scenes/UI.gd<>res://Scenes/main_scenes/vb.gd<>uid://oay6gx6lw4wk<>uid://b8a3h4xlr214<>uid://c0rskmcyvkrbm
 UI.gd::GDScript::-1::1683217115::0::1::::<>CanvasLayer<>::
 vb.gd::GDScript::-1::1683131909::0::1::::<>Control<>::
-::res://Scenes/maps/::1683300309
-map_1.tscn::PackedScene::3734553130993053540::1681133269::0::1::::<><>::uid://cjaxy4rgdl0oe<>uid://dn4xykuksgu1b
-map_1_path.tscn::PackedScene::4392023978961220979::1683300309::0::1::::<><>::uid://418fm8opdlfc
+::res://Scenes/maps/::1683907210
+map_1.tscn::PackedScene::3321100540758342007::1683907210::0::1::::<><>::uid://cjaxy4rgdl0oe<>uid://dn4xykuksgu1b<>uid://caephs020ws8o
 ::res://Scenes/ui_scenes/::1680715188
 main_menu.tscn::PackedScene::216797842752918955::1680715188::0::1::::<><>::uid://bs0vuqna6ys20<>uid://b2ie72tg16bx7<>uid://bu1oppkim0qfr<>uid://ya6qwqktgggu<>uid://bq4ecndlurebg
 ::res://unused-assets/::1680187976

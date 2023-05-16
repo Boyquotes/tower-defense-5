@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bthbsrm087odw"]
+[gd_scene load_steps=11 format=3 uid="uid://bnk1bnbgcta3h"]
 
-[ext_resource type="Texture2D" uid="uid://cjaxy4rgdl0oe" path="res://Assets/Environment/Tilesets/terrainTiles_default.png" id="1_kfc40"]
-[ext_resource type="Texture2D" uid="uid://dn4xykuksgu1b" path="res://Assets/Environment/Objects/objects_spriteSheet.png" id="2_3886s"]
+[ext_resource type="Texture2D" uid="uid://cjaxy4rgdl0oe" path="res://Assets/Environment/Tilesets/terrainTiles_default.png" id="1_lr8tb"]
+[ext_resource type="Texture2D" uid="uid://dn4xykuksgu1b" path="res://Assets/Environment/Objects/objects_spriteSheet.png" id="2_fum5y"]
+[ext_resource type="Script" path="res://Scenes/maps/EnemySpawner.gd" id="3_bn60y"]
+[ext_resource type="PackedScene" uid="uid://cwsul3cio3k6a" path="res://Scenes/actors/enemies/soldier_A_follow.tscn" id="4_8scyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5hk4"]
-texture = ExtResource("1_kfc40")
+texture = ExtResource("1_lr8tb")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:1/0 = 0
@@ -14,7 +16,7 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_n5hk4")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mh1j0"]
-texture = ExtResource("1_kfc40")
+texture = ExtResource("1_lr8tb")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/terrain_set = 0
@@ -79,7 +81,7 @@ texture_region_size = Vector2i(64, 64)
 6:1/0/terrains_peering_bit/top_side = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5rtou"]
-texture = ExtResource("2_3886s")
+texture = ExtResource("2_fum5y")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:1/0 = 0
@@ -96,6 +98,12 @@ terrain_set_0/terrain_0/color = Color(0.501961, 0.501961, 0.501961, 1)
 sources/0 = SubResource("TileSetAtlasSource_mh1j0")
 sources/3 = SubResource("TileSetAtlasSource_5rtou")
 
+[sub_resource type="Curve2D" id="Curve2D_x6ac0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -12, 287, 0, 0, 0, 0, 32, 289, 0, 0, 0, 0, 37, 415, 0, 0, 0, 0, 536, 411, 0, 0, 0, 0, 546, 226, 0, 0, 0, 0, 922, 224, 0, 0, 0, 0, 925, 419, 0, 0, 0, 0, 676, 424, 0, 0, 0, 0, 677, 610, 0, 0, 0, 0, 927, 612, 0, 0, 0, 0, 932, 665, 0, 0, 0, 0, 1116, 670, 0, 0, 0, 0, 1125, 224, 0, 0, 0, 0, 1291, 221)
+}
+point_count = 14
+
 [node name="map1" type="Node2D"]
 texture_filter = 1
 
@@ -110,4 +118,10 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 tile_set = SubResource("TileSet_eguej")
 cell_quadrant_size = 128
 format = 2
-layer_0/tile_data = PackedInt32Array(393216, 327680, 1, 393217, 131072, 0, 393218, 131072, 0, 393219, 131072, 0, 393220, 131072, 0, 393221, 131072, 0, 393222, 131072, 0, 327680, 65536, 0, 262144, 262144, 1, 458760, 65536, 0, 524296, 65536, 0, 589838, 65536, 0, 524302, 65536, 0, 458766, 65536, 0, 524305, 65536, 0, 458769, 65536, 0, 393233, 65536, 0, 589832, 65536, 0, 655368, 327680, 1, 655369, 131072, 0, 655370, 131072, 0, 655371, 131072, 0, 655372, 131072, 0, 655373, 131072, 0, 655374, 327680, 0, 655375, 131072, 0, 655376, 131072, 0, 655377, 393216, 1, 589841, 65536, 0, 393224, 262144, 0, 327688, 65536, 0, 262152, 65536, 0, 196616, 196608, 1, 196617, 131072, 0, 196618, 131072, 0, 196619, 131072, 0, 196620, 131072, 0, 196621, 131072, 0, 196622, 262144, 1, 262158, 65536, 0, 327694, 65536, 0, 393230, 65536, 0, 327697, 65536, 0, 262161, 65536, 0, 196625, 196608, 1, 196626, 131072, 0, 196627, 131072, 0, 589824, 65539, 1, 655361, 3, 1, 524291, 65539, 0, 524294, 65539, 1, 524300, 65539, 2, 393225, 65539, 0, 6, 65539, 1, 9, 3, 1, 131083, 65539, 0, 327685, 65539, 0, 0, 3, 0, 65538, 3, 1, 131076, 65539, 1, 131078, 3, 1, 196623, 65539, 1, 262159, 65539, 0, 524303, 3, 0, 16, 3, 1, 393226, 3, 1, 393223, 131072, 0, 589828, 3, 2, 262151, 3, 2, 262156, 3, 2, 458763, 65539, 2)
+layer_0/tile_data = PackedInt32Array(393216, 327680, 1, 393217, 131072, 0, 393218, 131072, 0, 393219, 131072, 0, 393220, 131072, 0, 393221, 131072, 0, 393222, 131072, 0, 327680, 65536, 0, 262144, 262144, 1, 589838, 262144, 1, 524305, 65536, 0, 458769, 65536, 0, 393233, 65536, 0, 655374, 327680, 1, 655375, 131072, 0, 655376, 131072, 0, 655377, 393216, 1, 589841, 65536, 0, 393224, 393216, 1, 327688, 65536, 0, 262152, 65536, 0, 196616, 196608, 1, 196617, 131072, 0, 196618, 131072, 0, 196619, 131072, 0, 196620, 131072, 0, 196621, 131072, 0, 196622, 262144, 1, 262158, 65536, 0, 327694, 65536, 0, 327697, 65536, 0, 262161, 65536, 0, 196625, 196608, 1, 196626, 131072, 0, 196627, 131072, 0, 589824, 65539, 1, 655361, 3, 1, 524291, 65539, 0, 524294, 65539, 1, 524300, 65539, 2, 6, 65539, 1, 9, 3, 1, 131083, 65539, 0, 327685, 65539, 0, 0, 3, 0, 65538, 3, 1, 131076, 65539, 1, 131078, 3, 1, 196623, 65539, 1, 262159, 65539, 0, 524303, 3, 0, 16, 3, 1, 393223, 131072, 0, 589828, 3, 2, 262151, 3, 2, 262156, 3, 2, 458763, 65539, 2, 262154, 3, 1, 589833, 65539, 0, 393230, 393216, 1, 393229, 131072, 0, 393228, 131072, 0, 393227, 131072, 0, 393226, 196608, 1, 458762, 65536, 0, 524298, 65536, 0, 589834, 327680, 1, 589835, 131072, 0, 589836, 131072, 0, 589837, 131072, 0)
+
+[node name="Track" type="Path2D" parent="."]
+curve = SubResource("Curve2D_x6ac0")
+script = ExtResource("3_bn60y")
+
+[node name="charFollow2D" parent="Track" instance=ExtResource("4_8scyx")]

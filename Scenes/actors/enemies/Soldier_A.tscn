@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://caephs020ws8o"]
 
-[ext_resource type="Script" path="res://Scenes/actors/enemies/soldier_A.gd" id="1_n1w38"]
+[ext_resource type="Script" path="res://Scenes/actors/enemies/soldier_A.gd" id="1_ltncp"]
 [ext_resource type="Texture2D" uid="uid://c3nrpxrks06r0" path="res://Assets/Enemies/towerDefense_tile245.png" id="2_b75ve"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dntqe"]
 radius = 15.0
 
 [node name="soldier_A" type="CharacterBody2D"]
-script = ExtResource("1_n1w38")
+script = ExtResource("1_ltncp")
 
 [node name="TowerDefenseTile245" type="Sprite2D" parent="."]
 texture = ExtResource("2_b75ve")
