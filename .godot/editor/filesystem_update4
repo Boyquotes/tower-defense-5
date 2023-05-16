@@ -4,3 +4,5 @@ res://Scenes/maps/Track.gd
 res://Scenes/actors/enemies/soldier_A.gd
 res://Scenes/maps/EnemySpawner.gd
 res://Scenes/actors/enemies/soldier_A_follow.tscn
+res://Scenes/actors/turrets/gun_t1.gd
+res://Scenes/actors/turrets/gun_t1.tscn

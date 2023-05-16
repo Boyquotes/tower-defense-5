@@ -1,7 +1,7 @@
 extends Path2D
 
 var timer = 0
-@export var spawnTime = 5
+@export var spawnTime = 0.5
 
 var follower = preload("res://Scenes/actors/enemies/soldier_A_follow.tscn")
 
@@ -11,4 +11,5 @@ func _process(delta):
 	if (timer > spawnTime):
 		var newFollower = follower.instantiate()
 		add_child(newFollower)
+		newFollower.add_to_group("enemies")
 		timer = 0
