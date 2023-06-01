@@ -24,9 +24,15 @@ texture = ExtResource("2_e2djc")
 offset = Vector2(12, 0)
 
 [node name="muzzle" type="Marker2D" parent="gun"]
-position = Vector2(44, 0)
+position = Vector2(39, 0)
 
-[node name="bulletContainer" type="Node" parent="gun/muzzle"]
+[node name="RayCast2D" type="RayCast2D" parent="gun"]
+position = Vector2(39, 0)
+target_position = Vector2(150, 0)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="body_shape_entered" from="base/range" to="." method="_on_range_body_shape_entered"]
 [connection signal="body_shape_exited" from="base/range" to="." method="_on_range_body_shape_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -128,4 +128,4 @@ script = ExtResource("3_bn60y")
 [node name="charFollow2D" parent="Track" instance=ExtResource("4_8scyx")]
 
 [node name="gun_t1" parent="." instance=ExtResource("5_ymmcd")]
-position = Vector2(252, 368)
+position = Vector2(240, 318)

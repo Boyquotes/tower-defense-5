@@ -1,19 +1,19 @@
 extends CharacterBody2D
 
-var target
-var speed = 1000
-var pathName = ""
-var damage
+var direction := Vector2.RIGHT
+var speed := 400
 
+func _ready():
+	set_as_top_level(true)
+	direction = direction.normalized()
+	look_at(direction + global_position)
+	
 func _physics_process(delta):
-	var pathSpawnerNode = get_tree().get_root().get_node("map1/PathSpawner")
-	
-	for i in pathSpawnerNode.get_child_count():
-		if pathSpawnerNode.get_child(i).name == pathName:
-			target = pathSpawnerNode.get_child(i).get_child(0).get_child(0).global_position
-	
-	velocity = global_position.direction_to(target) * speed
-	
-	look_at(target)
-	
-	move_and_slide()
+	var v = direction * speed * delta
+	var c := move_and_collide(v)
+	if c and c.collider:
+		#do shit here
+		queue_free()
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()
