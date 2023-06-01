@@ -7,15 +7,20 @@ func _physics_process(delta):
 	pass
 
 
-
 func _on_range_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	print(get_node("base/range").get_overlapping_bodies())
 	for bodies in get_node("base/range").get_overlapping_bodies():
-		print(bodies[1])
-		#if bodies.is_in_group("enemies"):
-		#	print(bodies)
-
-
+		if bodies.is_in_group("enemies"):
+			currTargets.append(bodies)
+			if target == null:
+				target = currTargets[0]
+				print(target)
 
 func _on_range_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	if currTargets.has(body):
+		currTargets.erase(body)
+		if currTargets != []:
+			target = currTargets[0]
+			print(target)
+		else:
+			target = null
 	pass
