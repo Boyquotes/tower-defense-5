@@ -1,6 +1,6 @@
 extends Node2D
 
-var target
+var target = null
 var currTargets = []
 
 @onready var _gun_node = get_node("gun")
@@ -12,6 +12,7 @@ var _can_fire := true
 
 @export var rotaion_speed = PI #radians per second, so 180 degrees
 @export var fire_rate = 1
+@export var damage = 5
 
 func _spawn_projectile():
 	var direction = Vector2.RIGHT.rotated((_gun_node.get_rotation()))
@@ -19,6 +20,7 @@ func _spawn_projectile():
 	projectile.direction = direction
 	projectile.global_position = _ray_cast.global_position
 	projectile.add_collision_exception_with(self)
+	#projectile.damage(damage)
 	add_child(projectile)
 
 func _aim(phy_delta):
@@ -33,37 +35,31 @@ func _aim(phy_delta):
 	angle = clamp(angle, r - angle_delta, r + angle_delta)
 	_gun_node.set_rotation(angle)
 
-func _physics_process(delta):
-	if currTargets.is_empty():
-		target = null
-	else:
-		target = currTargets[0]
-	
+func _physics_process(delta):	
 	if target != null:
 		_aim(delta)
 		
 	if _can_fire and _ray_cast.is_colliding():
-		#_spawn_projectile()
-		print("pew pew")
 		_spawn_projectile()
 		_can_fire = false
 		_cooldown_timer.start()
 
 func _on_range_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	#get all bodies in range and add to targets array if they are enemies
 	for bodies in get_node("base/range").get_overlapping_bodies():
 		if bodies.is_in_group("enemies"):
-			currTargets.append(bodies)
+			if !currTargets.has(bodies):
+				currTargets.append(bodies)
+			
+			#if no current target set first body in array as target
+			if target == null:
+				target = currTargets[0]
 
 func _on_range_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
-	if currTargets.has(body):
-		currTargets.remove_at(currTargets.find(body))
-		if target == body:
-			if currTargets.size() > 0:
-				for bodies in get_node("base/range").get_overlapping_bodies():
-					if bodies.is_in_group("enemies"):
-						currTargets.append(bodies)
-			else:
-				target = null
+	if body == target:
+		if currTargets.has(body):
+			currTargets.remove_at(currTargets.find(body))
+			target = null
 
 
 func _on_timer_timeout():

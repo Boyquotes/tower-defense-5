@@ -1,7 +1,7 @@
 extends Path2D
 
 var timer = 0
-@export var spawnTime = 1
+@export var spawnTime = 0.3
 
 var follower = preload("res://Scenes/actors/enemies/soldier_A_follow.tscn")
 

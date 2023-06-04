@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var direction := Vector2.RIGHT
-var speed := 400
-@export var damage = 1
+var direction := Vector2.RIGHT
+@export var damage = 10
+var speed := 500
 
 func _ready():
 	set_as_top_level(true)
