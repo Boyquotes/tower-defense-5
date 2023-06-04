@@ -11,8 +11,11 @@ var _projectile_scene = preload("res://Scenes/actors/turrets/bullet_sm.tscn")
 var _can_fire := true
 
 @export var rotaion_speed = PI #radians per second, so 180 degrees
-@export var fire_rate = 1
+@export var fire_rate = 1.0 #shots per second
 @export var damage = 10
+
+func _ready():
+	_cooldown_timer.wait_time = 1/fire_rate
 
 func _spawn_projectile():
 	var direction = Vector2.RIGHT.rotated((_gun_node.get_rotation()))
