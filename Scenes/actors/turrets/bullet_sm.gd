@@ -11,9 +11,10 @@ func _ready():
 func _physics_process(delta):
 	var v = direction * speed * delta
 	var c := move_and_collide(v)
-	if c and c.collider:
+	#if c and c.collider:
 		#do shit here
-		queue_free()
-
+	#	queue_free()
+	pass
+	
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
