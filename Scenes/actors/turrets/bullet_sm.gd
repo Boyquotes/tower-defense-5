@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-var direction := Vector2.RIGHT
+@export var direction := Vector2.RIGHT
 var speed := 400
+@export var damage = 1
 
 func _ready():
 	set_as_top_level(true)
@@ -11,10 +12,11 @@ func _ready():
 func _physics_process(delta):
 	var v = direction * speed * delta
 	var c := move_and_collide(v)
-	#if c and c.collider:
-		#do shit here
-	#	queue_free()
-	pass
+	if c and c.get_collider():
+		var collider = c.get_collider()
+		if collider.is_in_group("enemies"):
+			collider._damage(damage)
+			queue_free()
 	
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
