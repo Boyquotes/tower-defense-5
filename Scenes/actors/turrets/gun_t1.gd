@@ -12,7 +12,7 @@ var _can_fire := true
 
 @export var rotaion_speed = PI #radians per second, so 180 degrees
 @export var fire_rate = 1
-@export var damage = 5
+@export var damage = 10
 
 func _spawn_projectile():
 	var direction = Vector2.RIGHT.rotated((_gun_node.get_rotation()))
@@ -20,7 +20,7 @@ func _spawn_projectile():
 	projectile.direction = direction
 	projectile.global_position = _ray_cast.global_position
 	projectile.add_collision_exception_with(self)
-	#projectile.damage(damage)
+	projectile.damage = damage
 	add_child(projectile)
 
 func _aim(phy_delta):
