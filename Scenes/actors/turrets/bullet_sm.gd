@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-@export var direction := Vector2.RIGHT
+var direction := Vector2.RIGHT
 @export var damage = 10
 var speed := 500
 
 func _ready():
 	set_as_top_level(true)
-	direction = direction.normalized()
+	direction = transform.x
 	look_at(direction + global_position)
 	
 func _physics_process(delta):

@@ -9,7 +9,7 @@ radius = 185.132
 
 [node name="gun_t1" type="Node2D"]
 script = ExtResource("1_w2p58")
-fire_rate = 10.0
+fire_rate = 3.0
 damage = 4
 
 [node name="base" type="Sprite2D" parent="."]

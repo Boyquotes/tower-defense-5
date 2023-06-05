@@ -4,6 +4,7 @@ var target = null
 var currTargets = []
 
 @onready var _gun_node = get_node("gun")
+@onready var _muzzle = $gun/muzzle
 @onready var _ray_cast = $gun/RayCast2D
 @onready var _cooldown_timer = $Timer
 
@@ -18,12 +19,10 @@ func _ready():
 	_cooldown_timer.wait_time = 1/fire_rate
 
 func _spawn_projectile():
-	var direction = Vector2.RIGHT.rotated((_gun_node.get_rotation()))
 	var projectile = _projectile_scene.instantiate()
-	projectile.direction = direction
-	projectile.global_position = _ray_cast.global_position
 	projectile.add_collision_exception_with(self)
 	projectile.damage = damage
+	projectile.transform = _muzzle.global_transform
 	add_child(projectile)
 
 func _aim(phy_delta):

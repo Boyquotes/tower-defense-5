@@ -9,16 +9,19 @@ height = 16.0
 
 [node name="bullet_sm" type="CharacterBody2D"]
 rotation = 1.5708
+scale = Vector2(2, 2)
 script = ExtResource("1_wpjde")
 
 [node name="BulletDark2" type="Sprite2D" parent="."]
-position = Vector2(0, -1)
+rotation = 1.5708
 texture = ExtResource("1_egcjn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_gmgf1")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+visible = false
 position = Vector2(-5.96046e-08, -8.9407e-08)
 scale = Vector2(0.6, 0.9)
 
