@@ -66,10 +66,10 @@ func body_enter(_body_rid, _body, _body_shape_index, _local_shape_inde):
 				target = currTargets[0]	
 
 func body_exit(_body_rid, body, _body_shape_index, _local_shape_index):
-	if body == target:
-		target = null
 	if currTargets.has(body):
 		currTargets.remove_at(currTargets.find(body))
+		if body == target:
+			target = null
 
 func aim(phy_delta):
 	#vector from turret to ship and it's angle
