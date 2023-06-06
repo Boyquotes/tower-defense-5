@@ -38,11 +38,18 @@ func _ready():
 	#end of while loop
 	_range.body_shape_entered.connect(body_enter)
 	_range.body_shape_exited.connect(body_exit)
+	_timer.timeout.connect(timeout)
 	_timer.wait_time = 1/fire_rate
 
 func _physics_process(delta):	
 	if target != null:
 		aim(delta)
+		if can_fire and _ray_cast.is_colliding():
+			for muzzle in _muzzles:
+				shoot(muzzle)
+			#end of for loop
+			can_fire = false
+			_timer.start()
 
 func body_enter(body_rid, body, body_shape_index, local_shape_inde):
 	#get all bodies in range and add to targets array if they are enemies
@@ -70,14 +77,15 @@ func aim(phy_delta):
 	var r = _gun_node.get_rotation()
 	angle = lerp_angle(r,angle,1.0)
 	angle = clamp(angle, r - angle_delta, r + angle_delta)
+	#spain without a
 	_gun_node.set_rotation(angle)
 
-func shoot():
+func shoot(muzzle):
 	var projectile = _projectile_scene.instantiate()
 	projectile.add_collision_exception_with(self)
 	projectile.damage = damage
-	#projectile.transform = muzzle.global_transform
+	projectile.transform = muzzle.global_transform
 	add_child(projectile)
-	
-func on_timer_timeout():
+
+func timeout():
 	can_fire = true
