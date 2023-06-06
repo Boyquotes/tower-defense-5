@@ -133,5 +133,5 @@ position = Vector2(441, 339)
 damage = 5
 
 [node name="gun_t2" parent="." instance=ExtResource("6_qna2l")]
-position = Vector2(210, 320)
-fire_rate = 0.5
+position = Vector2(276, 461)
+fire_rate = 2.0

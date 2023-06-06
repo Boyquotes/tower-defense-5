@@ -25,6 +25,7 @@ var _projectile_scene = preload("res://Scenes/actors/turrets/bullet_sm.tscn")
 var currTargets = []
 var target = null
 var can_fire := true
+var current_muzzle = 0 #so they alternate when shooting
 
 func _ready():
 	var i = 1
@@ -40,14 +41,15 @@ func _ready():
 	_range.body_shape_exited.connect(body_exit)
 	_timer.timeout.connect(timeout)
 	_timer.wait_time = 1/fire_rate
-
-func _physics_process(delta):	
+ 
+func _physics_process(delta):
+	if current_muzzle >= _muzzles.size():
+		current_muzzle = 0
 	if target != null:
 		aim(delta)
 		if can_fire and _ray_cast.is_colliding():
-			for muzzle in _muzzles:
-				shoot(muzzle)
-			#end of for loop
+			shoot(_muzzles[current_muzzle])
+			current_muzzle =+ 1
 			can_fire = false
 			_timer.start()
 
