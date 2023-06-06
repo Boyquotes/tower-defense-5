@@ -1,4 +1,5 @@
 extends "res://Scenes/actors/turrets/gun_turrets.gd"
 
-#hello i exist
-#do not use _ready and _physics_process functions or they'll overwrite the ones from the parent class
+func _ready():
+	super()
+	_projectile_scene = preload("res://Scenes/actors/turrets/bullet_bg.tscn")

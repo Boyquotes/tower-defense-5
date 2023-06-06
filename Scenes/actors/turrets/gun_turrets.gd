@@ -7,7 +7,7 @@ extends Node2D
 @export var fire_rate = 1.0 #shots per second
 @export var damage = 10
 @export var pierce = 3 #how many enemies it can hit with each shot
-var _projectile_scene = preload("res://Scenes/actors/turrets/bullet_sm.tscn")
+@export var _projectile_scene = preload("res://Scenes/actors/turrets/bullet_sm.tscn")
 
 #scene tree variables, parts of the turret to be loaded by each scene based on which turret
 #all turrets have a immobile base that has a area2D to serve as the range detection
