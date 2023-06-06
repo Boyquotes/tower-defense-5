@@ -1,8 +1,7 @@
-res://Scenes/maps/map_1.tscn
-res://Scenes/actors/enemies/soldier_A.tscn
-res://Scenes/maps/Track.gd
-res://Scenes/actors/enemies/soldier_A.gd
-res://Scenes/maps/EnemySpawner.gd
-res://Scenes/actors/enemies/soldier_A_follow.tscn
-res://Scenes/actors/turrets/gun_t1.gd
 res://Scenes/actors/turrets/gun_t1.tscn
+res://Scenes/actors/turrets/gun_t1.gd
+res://Scenes/maps/map_1.tscn
+res://Scenes/actors/turrets/bullet_sm.tscn
+res://Scenes/actors/turrets/gun_t2.tscn
+res://Scenes/actors/turrets/gun_t2.gd
+res://Scenes/actors/turrets/gun_turrets.gd

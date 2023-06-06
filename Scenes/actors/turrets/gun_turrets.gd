@@ -18,6 +18,7 @@ extends Node2D
 @onready var _range = $base/range
 @onready var _ray_cast = $gun/RayCast2D
 @onready var _muzzles = []
+@onready var _timer = $Timer
 
 func initialize(): #why wont _ready function run from outside >:(
 	var i = 1
@@ -28,7 +29,17 @@ func initialize(): #why wont _ready function run from outside >:(
 			i = i+1
 		else:
 			break
+	#end of while loop
+	_range.body_shape_entered.connect(body_enter)
+	_range.body_shape_exited.connect(body_exit)
+	_timer.wait_time = 1/fire_rate
 
 func test():
 	for muzzle in _muzzles:
 		print("pew pew "+str(muzzle))
+
+func body_enter(body_rid, body, body_shape_index, local_shape_inde):
+	print("hello " + str(body))
+
+func body_exit(body_rid, body, body_shape_index, local_shape_index):
+	print("bye " + str(body))
