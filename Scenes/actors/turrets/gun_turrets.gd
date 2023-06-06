@@ -26,7 +26,7 @@ var currTargets = []
 var target = null
 var can_fire := true
 var current_muzzle = 0 #so they alternate when shooting
-var active = false
+@export var active = false
 
 var shots = 0
 

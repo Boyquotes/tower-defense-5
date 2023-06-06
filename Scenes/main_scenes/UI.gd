@@ -23,3 +23,19 @@ func button_press(button):
 func _physics_process(delta):
 	if placing:
 		_control.global_position = get_viewport().get_mouse_position()
+		if Input.is_action_just_pressed("left_click"):
+			#place tower
+			_control.remove_child(temp_tower)
+			_map.get_node("towers").add_child(temp_tower)
+			temp_tower.global_position = get_viewport().get_mouse_position()
+			temp_tower.damage = 5
+			temp_tower.fire_rate = 5
+			temp_tower.pierce = 3
+			temp_tower.active = true
+			temp_tower.get_node("range_view").visible = false
+			placing = false
+
+		if Input.is_action_just_pressed("right_click"):
+			_control.remove_child(temp_tower)
+			temp_tower.queue_free
+			placing = false

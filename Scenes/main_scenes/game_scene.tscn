@@ -73,3 +73,5 @@ texture = ExtResource("10_i34db")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[connection signal="gui_input" from="UI/HUD" to="UI" method="_on_hud_gui_input"]
