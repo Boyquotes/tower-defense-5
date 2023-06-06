@@ -11,7 +11,7 @@ func _process(delta):
 	if get_parent().get_progress_ratio() == 1:
 		get_parent().queue_free()
 
-func _damage(damage):
+func take_damage(damage):
 	health = health-damage
 	if health <= 0:
 		queue_free()

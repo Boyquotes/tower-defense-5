@@ -83,8 +83,10 @@ func aim(phy_delta):
 func shoot(muzzle):
 	var projectile = _projectile_scene.instantiate()
 	projectile.add_collision_exception_with(self)
+	projectile.transform = muzzle.global_transform	
 	projectile.damage = damage
-	projectile.transform = muzzle.global_transform
+	projectile.pierce = pierce
+	projectile.speed = 800
 	add_child(projectile)
 
 func timeout():
