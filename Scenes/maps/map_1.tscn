@@ -129,4 +129,3 @@ script = ExtResource("3_bn60y")
 
 [node name="gun_t1" parent="." instance=ExtResource("5_ymmcd")]
 position = Vector2(240, 318)
-damage = 10
