@@ -26,6 +26,7 @@ var currTargets = []
 var target = null
 var can_fire := true
 var current_muzzle = 0 #so they alternate when shooting
+var active = false
 
 var shots = 0
 
@@ -45,15 +46,16 @@ func _ready():
 	_timer.wait_time = 1/fire_rate
 	
 func _physics_process(delta):
-	if target != null:
-		aim(delta)
-		if can_fire and _ray_cast.is_colliding():
-			if current_muzzle == _muzzles.size():
-				current_muzzle = 0 #resets to the first when reaching final muzzle
-			shoot(_muzzles[current_muzzle])
-			current_muzzle += 1
-			can_fire = false
-			_timer.start()
+	if active:
+		if target != null:
+			aim(delta)
+			if can_fire and _ray_cast.is_colliding():
+				if current_muzzle == _muzzles.size():
+					current_muzzle = 0 #resets to the first when reaching final muzzle
+				shoot(_muzzles[current_muzzle])
+				current_muzzle += 1
+				can_fire = false
+				_timer.start()
 
 func body_enter(_body_rid, _body, _body_shape_index, _local_shape_inde):
 	#get all bodies in range and add to targets array if they are enemies

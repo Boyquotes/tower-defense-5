@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://25j4rm6x4e77"]
+[gd_scene load_steps=7 format=3 uid="uid://25j4rm6x4e77"]
 
-[ext_resource type="PackedScene" uid="uid://bnk1bnbgcta3h" path="res://Scenes/maps/map_1.tscn" id="1_arumy"]
+[ext_resource type="PackedScene" uid="uid://bugo8qpbd6che" path="res://Scenes/maps/map_1.tscn" id="1_arumy"]
 [ext_resource type="Script" path="res://Scenes/main_scenes/game_scene.gd" id="1_qdb7y"]
 [ext_resource type="Script" path="res://Scenes/main_scenes/UI.gd" id="6_7g7bw"]
-[ext_resource type="Script" path="res://Scenes/main_scenes/vb.gd" id="7_4qc1n"]
 [ext_resource type="Texture2D" uid="uid://oay6gx6lw4wk" path="res://Assets/UI/Buttons/red_button07.png" id="8_ggw0q"]
 [ext_resource type="Texture2D" uid="uid://b8a3h4xlr214" path="res://Assets/Towers/towerDefense_tile249.png" id="9_0wwkn"]
 [ext_resource type="Texture2D" uid="uid://c0rskmcyvkrbm" path="res://Assets/Towers/towerDefense_tile251.png" id="10_i34db"]
@@ -23,7 +22,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("7_4qc1n")
 
 [node name="BuildBar" type="VBoxContainer" parent="UI/HUD"]
 layout_mode = 1
@@ -70,3 +68,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_i34db")
+
+[node name="Control" type="Control" parent="UI/HUD"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
