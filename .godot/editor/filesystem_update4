@@ -1,10 +1,11 @@
 res://Scenes/actors/turrets/gun_t1.tscn
-res://Scenes/actors/turrets/gun_t1.gd
+res://Scenes/actors/turrets/gun_t2_fast.tscn
 res://Scenes/maps/map_1.tscn
-res://Scenes/actors/turrets/bullet_sm.tscn
-res://Scenes/actors/turrets/gun_t2.tscn
-res://Scenes/actors/turrets/gun_t2.gd
 res://Scenes/actors/turrets/gun_turrets.gd
 res://Scenes/maps/EnemySpawner.gd
-res://Scenes/actors/turrets/bullet_sm.gd
 res://Scenes/actors/enemies/soldier_A.gd
+res://Scenes/actors/turrets/gun_t2_strong.tscn
+res://Scenes/actors/turrets/gun_t2_strong.gd
+res://Scenes/main_scenes/game_scene.tscn
+res://Scenes/main_scenes/UI.gd
+res://Scenes/main_scenes/game_scene.gd

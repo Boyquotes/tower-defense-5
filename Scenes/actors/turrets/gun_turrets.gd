@@ -28,8 +28,6 @@ var can_fire := true
 var current_muzzle = 0 #so they alternate when shooting
 @export var active = false
 
-var shots = 0
-
 func _ready():
 	var i = 1
 	while true:
@@ -87,8 +85,6 @@ func aim(phy_delta):
 	_gun_node.set_rotation(angle)
 
 func shoot(muzzle):
-	shots += 1
-	print("shots fired: #"+str(shots))
 	var projectile = _projectile_scene.instantiate()
 	projectile.transform = muzzle.global_transform	
 	projectile.damage = damage

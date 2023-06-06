@@ -28,8 +28,8 @@ func _physics_process(delta):
 			_control.remove_child(temp_tower)
 			_map.get_node("towers").add_child(temp_tower)
 			temp_tower.global_position = get_viewport().get_mouse_position()
-			temp_tower.damage = 5
-			temp_tower.fire_rate = 5
+			temp_tower.damage = 10
+			temp_tower.fire_rate = 3
 			temp_tower.pierce = 3
 			temp_tower.active = true
 			temp_tower.get_node("range_view").visible = false

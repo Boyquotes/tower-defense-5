@@ -1,3 +1,5 @@
+Control
+Panel
 Area2D
 Timer
 RayCast2D
@@ -12,7 +14,6 @@ Camera2D
 TextureRect
 TextureButton
 VBoxContainer
-Control
 CanvasLayer
 Label
 MarginContainer
