@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bthvrx45eau3s"]
+[gd_scene load_steps=5 format=3 uid="uid://53nenby14n6n"]
 
-[ext_resource type="Script" path="res://Scenes/actors/turrets/gun_t2.gd" id="1_6qiat"]
 [ext_resource type="Texture2D" uid="uid://e77xv3l1jgdy" path="res://Assets/Towers/towerDefense_tile181.png" id="1_t8g78"]
-[ext_resource type="Texture2D" uid="uid://cp77o7vojskr2" path="res://Assets/Towers/towerDefense_tile250.png" id="2_akwsm"]
+[ext_resource type="Script" path="res://Scenes/actors/turrets/gun_t2_fast.gd" id="1_uh7b0"]
+[ext_resource type="Texture2D" uid="uid://csgmbt01vqjph" path="res://Assets/Towers/towerDefense_tile250-mod-2.png" id="3_g4nre"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s3jo1"]
 radius = 185.132
 
 [node name="gun_t2" type="Node2D"]
-script = ExtResource("1_6qiat")
+script = ExtResource("1_uh7b0")
 
 [node name="base" type="Sprite2D" parent="."]
 texture = ExtResource("1_t8g78")
@@ -21,7 +21,7 @@ shape = SubResource("CircleShape2D_s3jo1")
 
 [node name="gun" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
-texture = ExtResource("2_akwsm")
+texture = ExtResource("3_g4nre")
 offset = Vector2(12, 0)
 
 [node name="muzzle1" type="Marker2D" parent="gun"]

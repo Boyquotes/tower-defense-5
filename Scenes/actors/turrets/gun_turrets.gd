@@ -41,17 +41,20 @@ func _ready():
 	_range.body_shape_exited.connect(body_exit)
 	_timer.timeout.connect(timeout)
 	_timer.wait_time = 1/fire_rate
- 
+	print("total muzzles: " + str(_muzzles.size()))
+	
 func _physics_process(delta):
-	if current_muzzle >= _muzzles.size():
-		current_muzzle = 0
 	if target != null:
 		aim(delta)
 		if can_fire and _ray_cast.is_colliding():
+			if current_muzzle == _muzzles.size():
+				current_muzzle = 0 #resets to the first when reaching final muzzle
 			shoot(_muzzles[current_muzzle])
-			current_muzzle =+ 1
+			print("shot muzzle #" + str(current_muzzle))
+			current_muzzle += 1
 			can_fire = false
 			_timer.start()
+			print("incremented to " + str(current_muzzle))
 
 func body_enter(body_rid, body, body_shape_index, local_shape_inde):
 	#get all bodies in range and add to targets array if they are enemies
