@@ -130,4 +130,4 @@ position = Vector2(-282, 287)
 rotation = 0.00636934
 
 [node name="gun_t1" parent="." instance=ExtResource("5_ymmcd")]
-position = Vector2(230, 357)
+position = Vector2(277, 305)

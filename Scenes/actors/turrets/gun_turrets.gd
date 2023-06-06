@@ -27,6 +27,8 @@ var target = null
 var can_fire := true
 var current_muzzle = 0 #so they alternate when shooting
 
+var shots = 0
+
 func _ready():
 	var i = 1
 	while true:
@@ -53,9 +55,9 @@ func _physics_process(delta):
 			can_fire = false
 			_timer.start()
 
-func body_enter(body_rid, body, body_shape_index, local_shape_inde):
+func body_enter(_body_rid, _body, _body_shape_index, _local_shape_inde):
 	#get all bodies in range and add to targets array if they are enemies
-	for bodies in get_node("base/range").get_overlapping_bodies():
+	for bodies in _range.get_overlapping_bodies():
 		if bodies.is_in_group("enemies"):
 			if !currTargets.has(bodies):
 				currTargets.append(bodies)			
@@ -63,11 +65,11 @@ func body_enter(body_rid, body, body_shape_index, local_shape_inde):
 			if target == null:
 				target = currTargets[0]	
 
-func body_exit(body_rid, body, body_shape_index, local_shape_index):
+func body_exit(_body_rid, body, _body_shape_index, _local_shape_index):
 	if body == target:
-		if currTargets.has(body):
-			currTargets.remove_at(currTargets.find(body))
-			target = null
+		target = null
+	if currTargets.has(body):
+		currTargets.remove_at(currTargets.find(body))
 
 func aim(phy_delta):
 	#vector from turret to ship and it's angle
@@ -83,8 +85,9 @@ func aim(phy_delta):
 	_gun_node.set_rotation(angle)
 
 func shoot(muzzle):
+	shots += 1
+	print("shots fired: #"+str(shots))
 	var projectile = _projectile_scene.instantiate()
-	projectile.add_collision_exception_with(self)
 	projectile.transform = muzzle.global_transform	
 	projectile.damage = damage
 	projectile.pierce = pierce
