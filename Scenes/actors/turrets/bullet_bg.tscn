@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://5rr2h4i2cdnm" path="res://Assets/Towers/bulletRed3_outline.png" id="2_bqbt6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmgf1"]
-radius = 4.49999
-height = 18.0
+radius = 8.0
+height = 27.0
 
 [node name="bullet_bg" type="CharacterBody2D"]
 rotation = 1.5708
@@ -16,11 +16,12 @@ script = ExtResource("1_oo3hh")
 
 [node name="BulletDark2" type="Sprite2D" parent="."]
 rotation = 1.5708
+scale = Vector2(1.94658, 1.06186)
 texture = ExtResource("2_bqbt6")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-5.96046e-08, -8.9407e-08)
-scale = Vector2(0.6, 0.9)
+position = Vector2(0.0556802, -0.111362)
+scale = Vector2(0.663105, 1.61272)
 rect = Rect2(-15, -5, 30, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

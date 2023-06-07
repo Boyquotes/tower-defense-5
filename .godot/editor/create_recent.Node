@@ -1,13 +1,15 @@
+CollisionShape2D
+Area2D
+Marker2D
+Sprite2D
 Control
 Panel
-Area2D
 Timer
 RayCast2D
 VisibleOnScreenNotifier2D
 PathFollow2D
 Path2D
 Node
-CollisionShape2D
 CharacterBody2D
 Node2D
 Camera2D
@@ -17,6 +19,4 @@ VBoxContainer
 CanvasLayer
 Label
 MarginContainer
-Sprite2D
-Marker2D
 TileMap

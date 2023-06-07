@@ -1,13 +1,10 @@
-extends "res://Scenes/actors/turrets/gun_turrets.gd"
-
-func _ready():
-	super()
-	_projectile_scene = preload("res://Scenes/actors/turrets/bullet_bg.tscn")
+extends "res://Scenes/actors/turrets/missile_turrets.gd"
 
 func shoot(muzzle):
 	var projectile = _projectile_scene.instantiate()
 	projectile.transform = muzzle.global_transform	
 	projectile.damage = damage
 	projectile.pierce = pierce
-	projectile.speed = 1200
+	projectile.speed = 800
+	projectile.guided = true #go get'em
 	add_child(projectile)
