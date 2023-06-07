@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://25j4rm6x4e77"]
+[gd_scene load_steps=11 format=3 uid="uid://25j4rm6x4e77"]
 
 [ext_resource type="PackedScene" uid="uid://bugo8qpbd6che" path="res://Scenes/maps/map_1.tscn" id="1_arumy"]
 [ext_resource type="Script" path="res://Scenes/main_scenes/game_scene.gd" id="1_qdb7y"]
 [ext_resource type="Script" path="res://Scenes/main_scenes/UI.gd" id="6_7g7bw"]
+[ext_resource type="Texture2D" uid="uid://b2ie72tg16bx7" path="res://Assets/UI/Buttons/red_button01.png" id="7_g04nx"]
 [ext_resource type="Texture2D" uid="uid://oay6gx6lw4wk" path="res://Assets/UI/Buttons/red_button07.png" id="8_ggw0q"]
+[ext_resource type="Texture2D" uid="uid://bu1oppkim0qfr" path="res://Assets/UI/Buttons/red_button00.png" id="8_rgl85"]
 [ext_resource type="Texture2D" uid="uid://b8a3h4xlr214" path="res://Assets/Towers/towerDefense_tile249.png" id="9_0wwkn"]
+[ext_resource type="Texture2D" uid="uid://ya6qwqktgggu" path="res://Assets/UI/Buttons/red_button11.png" id="9_c31cj"]
 [ext_resource type="Texture2D" uid="uid://c0rskmcyvkrbm" path="res://Assets/Towers/towerDefense_tile251.png" id="10_i34db"]
+[ext_resource type="FontFile" uid="uid://bq4ecndlurebg" path="res://Assets/UI/Fonts/Kenney_FN_mm_theme.tres" id="10_urcng"]
 
 [node name="gameScene" type="Node2D"]
 script = ExtResource("1_qdb7y")
@@ -73,5 +77,158 @@ texture = ExtResource("10_i34db")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="stats" type="HBoxContainer" parent="UI/HUD"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -468.0
+offset_top = 302.0
+offset_right = 62.0
+offset_bottom = 367.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 8
+theme_override_constants/separation = 30
+
+[node name="lives" type="TextureButton" parent="UI/HUD/stats"]
+custom_minimum_size = Vector2(250, 65)
+layout_mode = 2
+size_flags_horizontal = 4
+disabled = true
+texture_normal = ExtResource("7_g04nx")
+texture_pressed = ExtResource("8_rgl85")
+texture_hover = ExtResource("9_c31cj")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/HUD/stats/lives"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_urcng")
+theme_override_font_sizes/font_size = 40
+text = "lives
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="money" type="TextureButton" parent="UI/HUD/stats"]
+custom_minimum_size = Vector2(250, 65)
+layout_mode = 2
+size_flags_horizontal = 4
+disabled = true
+texture_normal = ExtResource("7_g04nx")
+texture_pressed = ExtResource("8_rgl85")
+texture_hover = ExtResource("9_c31cj")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/HUD/stats/money"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_urcng")
+theme_override_font_sizes/font_size = 40
+text = "money"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="dead screen" type="VBoxContainer" parent="UI/HUD"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 0
+offset_left = 367.0
+offset_top = 240.0
+offset_right = 867.0
+offset_bottom = 480.0
+size_flags_horizontal = 8
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label2" type="Label" parent="UI/HUD/dead screen"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_urcng")
+theme_override_font_sizes/font_size = 40
+text = "o troxa morreu"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="newGame" type="TextureButton" parent="UI/HUD/dead screen"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("7_g04nx")
+texture_pressed = ExtResource("8_rgl85")
+texture_hover = ExtResource("9_c31cj")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/HUD/dead screen/newGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_urcng")
+theme_override_font_sizes/font_size = 40
+text = "Reiniciar"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Control" type="Control" parent="UI/HUD/dead screen"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="quit" type="TextureButton" parent="UI/HUD/dead screen"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("7_g04nx")
+texture_pressed = ExtResource("8_rgl85")
+texture_hover = ExtResource("9_c31cj")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/HUD/dead screen/quit"]
+layout_mode = 2
+offset_left = -73.0
+offset_top = 11.0
+offset_right = 427.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.247059)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.443137)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_urcng")
+theme_override_font_sizes/font_size = 40
+text = "sair"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [connection signal="gui_input" from="UI/HUD" to="UI" method="_on_hud_gui_input"]

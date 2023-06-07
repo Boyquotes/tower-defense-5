@@ -1,3 +1,7 @@
+HBoxContainer
+RichTextLabel
+Label
+TextEdit
 CollisionShape2D
 Area2D
 Marker2D
@@ -17,6 +21,5 @@ TextureRect
 TextureButton
 VBoxContainer
 CanvasLayer
-Label
 MarginContainer
 TileMap
