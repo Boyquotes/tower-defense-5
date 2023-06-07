@@ -3,7 +3,7 @@ extends Node2D
 @onready var lives_label = $UI/HUD/stats/lives/Label
 @onready var money_label = $UI/HUD/stats/money/Label
 @onready var dead_screen = $"UI/HUD/dead screen"
-@onready var lives = 10
+@onready var lives = 100
 @onready var money = 500
 @onready var dead = false
 
