@@ -7,7 +7,7 @@ extends Node2D
 @export var fire_rate = 1.0 #shots per second
 @export var damage = 10
 @export var pierce = 3 #how many enemies it can hit with each shot
-@export var _projectile_scene = preload("res://Scenes/actors/turrets/bullet_sm.tscn")
+var _projectile_scene = preload("res://Scenes/actors/turrets/bullet_sm.tscn")
 
 #scene tree variables, parts of the turret to be loaded by each scene based on which turret
 #all turrets have a immobile base that has a area2D to serve as the range detection
@@ -60,15 +60,17 @@ func body_enter(_body_rid, _body, _body_shape_index, _local_shape_inde):
 	for bodies in _range.get_overlapping_bodies():
 		if bodies.is_in_group("enemies"):
 			if !currTargets.has(bodies):
-				currTargets.append(bodies)			
+				currTargets.append(bodies)
 			#if no current target set first body in array as target
 			if target == null:
-				target = currTargets[0]	
+				target = currTargets[0]
+				#target.targeted(true)
 
 func body_exit(_body_rid, body, _body_shape_index, _local_shape_index):
 	if currTargets.has(body):
 		currTargets.remove_at(currTargets.find(body))
 		if body == target:
+			#target.targeted(false)
 			target = null
 
 func aim(phy_delta):

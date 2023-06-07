@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 800
 @export var health = 10
+@onready var sprite = $TowerDefenseTile245
 
 func _ready():
 	add_to_group("enemies")
@@ -15,3 +16,9 @@ func take_damage(damage):
 	health = health-damage
 	if health <= 0:
 		queue_free()
+
+func targeted(is_tar):
+	if is_tar:
+		sprite.modulate = Color(1,0,0)
+	else:
+		sprite.modulate = Color(1,1,1)

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://btp4swrbw2vla"]
+
+[ext_resource type="Script" path="res://Scenes/actors/turrets/missile.gd" id="1_xbtbc"]
+[ext_resource type="Texture2D" uid="uid://c0rskmcyvkrbm" path="res://Assets/Towers/towerDefense_tile251.png" id="2_5dss1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmgf1"]
+radius = 6.0
+height = 35.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bdpnn"]
+radius = 89.5056
+
+[node name="missile" type="CharacterBody2D"]
+rotation = 1.5708
+scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_xbtbc")
+
+[node name="BulletDark2" type="Sprite2D" parent="."]
+texture = ExtResource("2_5dss1")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-0.795494, 0.441948)
+scale = Vector2(1.21872, 1.3773)
+rect = Rect2(-15, -5, 30, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gmgf1")
+
+[node name="explosion_range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="explosion_range"]
+shape = SubResource("CircleShape2D_bdpnn")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
